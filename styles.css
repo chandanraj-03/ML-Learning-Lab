@@ -2690,3 +2690,338 @@ footer {
 .comparison-table tr:hover td {
     background: rgba(79, 70, 229, 0.05);
 }
+/* Dark mode root variables */
+.dark-mode ~ div .stApp,
+body:has(.dark-mode) .stApp {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: rgba(30, 41, 59, 0.8);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border-color: rgba(148, 163, 184, 0.2);
+    --glass-border: 1px solid rgba(148, 163, 184, 0.15);
+    --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode background */
+body:has(.dark-mode) .stApp {
+    background: linear-gradient(135deg,
+            #0f172a 0%,
+            #1e293b 25%,
+            #334155 50%,
+            #1e293b 75%,
+            #0f172a 100%) !important;
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+}
+
+/* Dark mode text colors */
+body:has(.dark-mode) .stApp h1,
+body:has(.dark-mode) .stApp h2,
+body:has(.dark-mode) .stApp h3,
+body:has(.dark-mode) .stApp h4,
+body:has(.dark-mode) .stApp h5,
+body:has(.dark-mode) .stApp h6 {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .stApp p,
+body:has(.dark-mode) .stApp span,
+body:has(.dark-mode) .stApp label,
+body:has(.dark-mode) .stApp div {
+    color: #e2e8f0;
+}
+
+/* Dark mode sidebar */
+body:has(.dark-mode) [data-testid="stSidebar"] {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-right: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+body:has(.dark-mode) .sidebar-logo span {
+    background: linear-gradient(135deg, #818cf8, #a78bfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Dark mode cards and glass effects */
+body:has(.dark-mode) .glass,
+body:has(.dark-mode) .glass-heavy {
+    background: rgba(30, 41, 59, 0.7) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .stat-card {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .feature-card {
+    background: rgba(30, 41, 59, 0.85) !important;
+    border: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+body:has(.dark-mode) .feature-card.learn {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2)) !important;
+}
+
+body:has(.dark-mode) .feature-card.experiment {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(251, 191, 36, 0.2)) !important;
+}
+
+body:has(.dark-mode) .feature-card.predict {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.2)) !important;
+}
+
+body:has(.dark-mode) .feature-card.code {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2)) !important;
+}
+
+body:has(.dark-mode) .feature-card .card-title {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .feature-card .card-desc {
+    color: #cbd5e1 !important;
+}
+
+/* Dark mode category cards */
+body:has(.dark-mode) .category-card {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .cat-name {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .cat-count {
+    color: #94a3b8 !important;
+}
+
+body:has(.dark-mode) .cat-algo-tag {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+}
+
+/* Dark mode quick start cards */
+body:has(.dark-mode) .quick-start-card {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .qs-title {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .qs-text,
+body:has(.dark-mode) .feature-item {
+    color: #cbd5e1 !important;
+}
+
+/* Dark mode hero section */
+body:has(.dark-mode) .hero-compact {
+    background: rgba(30, 41, 59, 0.6) !important;
+}
+
+body:has(.dark-mode) .hero-main-title {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .hero-tagline {
+    color: #94a3b8 !important;
+}
+
+/* Dark mode algorithm detail cards */
+body:has(.dark-mode) .algo-detail-card {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .adc-name {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .adc-tagline,
+body:has(.dark-mode) .adc-description {
+    color: #cbd5e1 !important;
+}
+
+body:has(.dark-mode) .wtu-text {
+    color: #94a3b8 !important;
+}
+
+body:has(.dark-mode) .kf-item {
+    color: #a5b4fc !important;
+}
+
+body:has(.dark-mode) .formula-code {
+    background: rgba(99, 102, 241, 0.15) !important;
+    color: #c7d2fe !important;
+}
+
+/* Dark mode category overview */
+body:has(.dark-mode) .category-overview-header {
+    background: rgba(30, 41, 59, 0.7) !important;
+}
+
+body:has(.dark-mode) .coh-title {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .category-overview-section {
+    background: rgba(30, 41, 59, 0.6) !important;
+}
+
+body:has(.dark-mode) .cos-title {
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .cos-text {
+    color: #cbd5e1 !important;
+}
+
+body:has(.dark-mode) .use-case-tag {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+}
+
+/* Dark mode inputs */
+body:has(.dark-mode) .stTextInput > div > div,
+body:has(.dark-mode) .stSelectbox > div > div {
+    background: rgba(30, 41, 59, 0.9) !important;
+    border-color: rgba(148, 163, 184, 0.2) !important;
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .stTextInput input,
+body:has(.dark-mode) .stNumberInput input {
+    background: rgba(30, 41, 59, 0.9) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Dark mode tabs */
+body:has(.dark-mode) .stTabs [data-baseweb="tab-list"] {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .stTabs [data-baseweb="tab"] {
+    color: #94a3b8 !important;
+}
+
+body:has(.dark-mode) .stTabs [data-baseweb="tab"]:hover {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Dark mode expanders */
+body:has(.dark-mode) .streamlit-expanderHeader {
+    background: rgba(99, 102, 241, 0.15) !important;
+    border-color: rgba(148, 163, 184, 0.2) !important;
+    color: #f1f5f9 !important;
+}
+
+body:has(.dark-mode) .streamlit-expanderContent {
+    background: rgba(30, 41, 59, 0.9) !important;
+    border-color: rgba(148, 163, 184, 0.15) !important;
+}
+
+/* Dark mode ambient glows */
+body:has(.dark-mode) .ambient-glow {
+    opacity: 0.15;
+}
+
+body:has(.dark-mode) .glow-1 {
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+}
+
+body:has(.dark-mode) .glow-2 {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.15), transparent 70%);
+}
+
+body:has(.dark-mode) .glow-3 {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 70%);
+}
+
+/* Dark mode footer */
+body:has(.dark-mode) .sidebar-footer {
+    background: rgba(99, 102, 241, 0.1) !important;
+    border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+body:has(.dark-mode) .footer-text,
+body:has(.dark-mode) .footer-author {
+    color: #94a3b8 !important;
+}
+
+/* Dark mode metric cards */
+body:has(.dark-mode) [data-testid="stMetric"] {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+body:has(.dark-mode) [data-testid="stMetricLabel"] {
+    color: #94a3b8 !important;
+}
+
+body:has(.dark-mode) [data-testid="stMetricValue"] {
+    color: #f1f5f9 !important;
+}
+
+/* Dark mode code blocks */
+body:has(.dark-mode) .stCodeBlock {
+    background: rgba(15, 23, 42, 0.9) !important;
+}
+
+/* Dark mode markdown */
+body:has(.dark-mode) .stMarkdown {
+    color: #e2e8f0 !important;
+}
+
+/* Dark mode dataframes */
+body:has(.dark-mode) .stDataFrame {
+    background: rgba(30, 41, 59, 0.8) !important;
+}
+
+/* Dark mode comparison table */
+body:has(.dark-mode) .comparison-table td {
+    background: rgba(30, 41, 59, 0.9) !important;
+    color: #e2e8f0 !important;
+    border-bottom-color: rgba(148, 163, 184, 0.1) !important;
+}
+
+body:has(.dark-mode) .comparison-table tr:hover td {
+    background: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Dark mode home footer */
+body:has(.dark-mode) .home-footer {
+    background: rgba(30, 41, 59, 0.6) !important;
+}
+
+body:has(.dark-mode) .tip-text {
+    color: #94a3b8 !important;
+}
+
+/* Dark mode section titles */
+body:has(.dark-mode) .section-title-simple {
+    color: #f1f5f9 !important;
+}
+
+/* Dark mode breadcrumb */
+body:has(.dark-mode) .breadcrumb-container {
+    background: rgba(30, 41, 59, 0.7) !important;
+}
+
+body:has(.dark-mode) .breadcrumb-item {
+    color: #94a3b8 !important;
+}
+
+body:has(.dark-mode) .breadcrumb-item.active {
+    color: #a5b4fc !important;
+}
