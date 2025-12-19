@@ -861,10 +861,31 @@ def show_help_dialog():
 
 def main():
     """Main application entry point"""
+    # Initialize dark mode in session state
+    if "dark_mode" not in st.session_state:
+        st.session_state.dark_mode = False
     
+    # Apply dark mode class if enabled
+    if st.session_state.dark_mode:
+        st.markdown('<div class="dark-mode"></div>', unsafe_allow_html=True)
+        st.markdown("""
+        <style>
+            .stApp { background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #1e293b 75%, #0f172a 100%) !important; }
+            .stApp, .stApp * { color-scheme: dark; }
+        </style>
+        """, unsafe_allow_html=True)
+    
+    # Add theme toggle and help button in the top-right header area
+    col1, col2, col3 = st.columns([18, 1, 1])
     # Add help button in the top-right header area
     col1, col2 = st.columns([20, 1])
     with col2:
+        theme_icon = "☀️" if st.session_state.dark_mode else "🌙"
+        theme_help = "Switch to Light Mode" if st.session_state.dark_mode else "Switch to Dark Mode"
+        if st.button(theme_icon, key="theme_btn", help=theme_help):
+            st.session_state.dark_mode = not st.session_state.dark_mode
+            st.rerun()
+    with col3:
         if st.button("ℹ️", key="help_btn", help="About this project"):
             show_help_dialog()
     
