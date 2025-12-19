@@ -878,7 +878,6 @@ def main():
     # Add theme toggle and help button in the top-right header area
     col1, col2, col3 = st.columns([18, 1, 1])
     # Add help button in the top-right header area
-    col1, col2 = st.columns([20, 1])
     with col2:
         theme_icon = "☀️" if st.session_state.dark_mode else "🌙"
         theme_help = "Switch to Light Mode" if st.session_state.dark_mode else "Switch to Dark Mode"
