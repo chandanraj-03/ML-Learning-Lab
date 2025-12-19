@@ -426,7 +426,7 @@ def render_sidebar():
         </div>
         <br>
         <p style="color: #64748b; font-size: 0.85rem; text-align: center;">
-            <a href="https://github.com/chandanraj123/ML-Learning-Lab" target="_blank" style="color: #6366f1;">source code 🖥️</a>
+            <a href="https://github.com/chandanraj-03/ML-Learning-Lab" target="_blank" style="color: #6366f1;">source code 🖥️</a>
         </p>
         """, unsafe_allow_html=True)
         
